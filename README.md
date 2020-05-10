@@ -22,7 +22,7 @@ smblogin hosts.txt .\Administrator P@ssw0rd
 smblogin hosts.txt CORP\bkpadmin P@ssw0rd
 ```
 
-The extra mini version lacks check for port tcp/445, otherwise the functionality is the same.
+**Note**: The extra mini version lacks check for port tcp/445, otherwise the functionality is the same.
 
 For more information, visit https://www.infosecmatter.com/minimalistic-smb-login-bruteforcer/
 
