@@ -1,4 +1,4 @@
-# Minimalistic offensive / attack tools
+# Minimalistic offensive security tools
 
 A repository of tools for pentesting of restricted and isolated environments.
 
