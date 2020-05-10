@@ -1,7 +1,3 @@
-# Minimalistic offensive security tools
-
-A repository of tools for pentesting of restricted and isolated environments.
-
 # Minimalistic SMB login bruteforcer (smblogin.ps1)
 
 A simple SMB login attack and password spraying tool.
