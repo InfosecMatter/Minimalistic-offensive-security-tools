@@ -24,6 +24,12 @@ smblogin hosts.txt CORP\bkpadmin P@ssw0rd
 
 **Note**: The extra mini version lacks check for port tcp/445, otherwise the functionality is the same.
 
+### Screenshot
+
+SMB password spraying over the network:
+
+![smblogin-1-smb-login-attack-running](https://user-images.githubusercontent.com/60963123/81509090-4b005580-9319-11ea-9706-6cc5d0b60f9a.png)
+
 For more information, visit https://www.infosecmatter.com/minimalistic-smb-login-bruteforcer/
 
 ## adlogin.ps1
