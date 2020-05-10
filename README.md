@@ -49,4 +49,10 @@ adlogin users.txt domain.com P@ssw0rd
 gc adlogin.*.txt | sls True
 ```
 
+### Screenshot
+
+Password login attack against domain users:
+
+![adlogin-attack-01-started](https://user-images.githubusercontent.com/60963123/81509021-cd3c4a00-9318-11ea-919f-9c6fd7ccfaed.jpg)
+
 For more information, visit https://www.infosecmatter.com/minimalistic-ad-login-bruteforcer/
