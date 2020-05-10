@@ -28,6 +28,8 @@ SMB password spraying over the network:
 
 For more information, visit https://www.infosecmatter.com/minimalistic-smb-login-bruteforcer/
 
+---
+
 # Minimalistic AD login bruteforcer (adlogin.ps1)
 
 A simple Active Directory login attack tool.
