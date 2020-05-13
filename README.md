@@ -1,5 +1,7 @@
 # Minimalistic SMB login bruteforcer (smblogin.ps1)
 
+https://www.infosecmatter.com/minimalistic-smb-login-bruteforcer/
+
 A simple SMB login attack and password spraying tool.
 
 It takes a list of targets and credentials (username and password) as parameters and it tries to authenticate against each target using the provided credentials.
@@ -31,6 +33,8 @@ For more information, visit https://www.infosecmatter.com/minimalistic-smb-login
 ---
 
 # Minimalistic AD login bruteforcer (adlogin.ps1)
+
+https://www.infosecmatter.com/minimalistic-ad-login-bruteforcer/
 
 A simple Active Directory login attack tool.
 
