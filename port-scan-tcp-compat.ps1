@@ -2,15 +2,15 @@ Function port-scan-tcp {
   param($hosts,$ports)
   if (!$ports) {
     Write-Host "usage: test-port-tcp <host|hosts> <port|ports>"
-	Write-Host " e.g.: test-port-tcp 192.168.1.2 445`n"
-	return
+    Write-Host " e.g.: test-port-tcp 192.168.1.2 445`n"
+    return
   }
   $out = ".\scanresults.txt"
   foreach($p in [array]$ports) {
    foreach($h in [array]$hosts) {
     $x = (gc $out -EA SilentlyContinue | select-string "^$h,tcp,$p,")
     if ($x) {
-	  gc $out | select-string "^$h,tcp,$p,"
+      gc $out | select-string "^$h,tcp,$p,"
       continue
     }
     $msg = "$h,tcp,$p,"
