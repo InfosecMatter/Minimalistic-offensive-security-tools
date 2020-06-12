@@ -18,19 +18,25 @@ Import-Module .\port-scan-udp.ps1
 port-scan-tcp <host(s)> <port(s)>
 port-scan-udp <host(s)> <port(s)>
 ```
+
+**Check if a remote host has port tcp/80 open (HTTP)**
+```
+port-scan-tcp 192.168.205.15 80
+```
+
 **Scanning a single host for common TCP ports**
 ```
 port-scan-tcp 10.10.0.1 (21,22,23,25,80,443,445,3389)
 ```
 
-**Scanning a network range /24 for port tcp/445**
-```
-0..255 | foreach { port-scan-tcp 192.168.204.$_ 445 }
-```
-
-**Scanning a list of hosts in a file for port tcp/22**
+**Scanning a list of hosts in a file for port tcp/22 (SSH)**
 ```
 port-scan-tcp (gc .\computers.txt) 22
+```
+
+**Scanning a network range /24 for port tcp/445 (SMB)**
+```
+0..255 | foreach { port-scan-tcp 192.168.204.$_ 445 }
 ```
 
 **Scanning a single host for common UDP services**
@@ -38,7 +44,7 @@ port-scan-tcp (gc .\computers.txt) 22
 test-port-udp 192.168.205.15 (53,161,623)
 ```
 
-**Scanning a network range /24 for SNMP**
+**Scanning a network range /24 for port udp/161 (SNMP)**
 ```
 0..255 | foreach { test-port-udp 10.10.0.$_ 161 }
 ```
