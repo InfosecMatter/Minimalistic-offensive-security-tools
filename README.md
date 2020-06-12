@@ -1,4 +1,4 @@
-# Minimalistic TCP and UDP port scanner<br>(port-scan-tcp.ps1 | port-scan-udp.ps1)
+# Minimalistic TCP and UDP port scanners<br>(port-scan-tcp.ps1 | port-scan-udp.ps1)
 
 A simple yet powerful TCP and UDP port scanners:
 * Detection of open, closed and filtered ports (both TCP and UDP)
