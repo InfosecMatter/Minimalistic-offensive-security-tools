@@ -19,7 +19,7 @@ port-scan-tcp <host(s)> <port(s)>
 port-scan-udp <host(s)> <port(s)>
 ```
 
-**Check if a remote host has port tcp/80 open (HTTP)**
+**Port check of a single host for port tcp/80 (HTTP)**
 ```
 port-scan-tcp 192.168.205.15 80
 ```
@@ -49,8 +49,6 @@ test-port-udp 192.168.205.15 (53,161,623)
 0..255 | foreach { test-port-udp 10.10.0.$_ 161 }
 ```
 
-**Note**: The tcp compat version lacks check for port tcp/445, otherwise the functionality is the same.
-
 ## Screenshot
 
 **Scanning a network range for selected TCP ports**
@@ -61,6 +59,8 @@ test-port-udp 192.168.205.15 (53,161,623)
 ![portscan-network-range-multiple-ports2](https://user-images.githubusercontent.com/60963123/84473338-f0e90c00-ac99-11ea-937d-9593a0035fd7.png)
 
 For more information, visit https://www.infosecmatter.com/minimalistic-tcp-and-udp-port-scanner/
+
+**Note**: The port-scan-tcp-compat.ps1 version is for older systems without having .NET 4.5 installed.
 
 ---
 
