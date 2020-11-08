@@ -64,6 +64,39 @@ For more information, visit https://www.infosecmatter.com/minimalistic-tcp-and-u
 
 ---
 
+# Minimalistic Windows local account login bruteforcer (localbrute.ps1)
+
+A simple local account login bruteforce tool for privilege escalation on Windows.
+
+It takes a username and a wordlist (password list) as parameters and it tries to authenticate as the specified user account locally on the system.
+
+The tool keeps track of the progress in a state file. This allows the tool to be easily resumed if it was interrupted or skip already compromised accounts.
+
+See the main article for detailed description: https://www.infosecmatter.com/minimalistic-local-admin-bruteforcer-windows-privilege-escalation/
+
+## Usage and examples
+```
+Import-Module .\localbrute.ps1
+
+# Usage:
+localbrute <username> <path-to-wordlist> [debug]
+
+# Example:
+localbrute Administrator .\rockyou.txt
+```
+
+**Note**: The extra mini version does not keep any state file, otherwise the functionality is the same.
+
+## Screenshot
+
+Brute force login attack on local Administrator account:
+
+![local-account-login-bruteforce-with-loginbrute-github](https://user-images.githubusercontent.com/60963123/98463238-4be44800-21d3-11eb-9d40-dec2e4da4174.png)
+
+For more information, visit https://www.infosecmatter.com/minimalistic-local-admin-bruteforcer-windows-privilege-escalation/
+
+---
+
 # Minimalistic SMB login bruteforcer (smblogin.ps1)
 
 A simple SMB login attack and password spraying tool.
