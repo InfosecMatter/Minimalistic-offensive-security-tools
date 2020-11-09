@@ -70,7 +70,7 @@ A simple local account login bruteforce tool for privilege escalation on Windows
 
 It takes a username and a wordlist (password list) as parameters and it tries to authenticate as the specified user account locally on the system.
 
-The tool keeps track of the progress in a state file. This allows the tool to be easily resumed if it was interrupted or skip already compromised accounts.
+The tool keeps track of the progress in a state file in the current working directory. This allows the tool to be resumed if it was interrupted or skip already compromised accounts.
 
 See the main article for detailed description: https://www.infosecmatter.com/minimalistic-local-admin-bruteforcer-windows-privilege-escalation/
 
@@ -91,7 +91,8 @@ localbrute Administrator .\rockyou.txt
 
 Brute force login attack on local Administrator account:
 
-![local-account-login-bruteforce-with-loginbrute-github](https://user-images.githubusercontent.com/60963123/98463238-4be44800-21d3-11eb-9d40-dec2e4da4174.png)
+![local-account-login-bruteforce-with-loginbrute-github](https://user-images.githubusercontent.com/60963123/98514680-480ffe80-2283-11eb-9b0d-29957382b448.png)
+
 
 For more information, visit https://www.infosecmatter.com/minimalistic-local-admin-bruteforcer-windows-privilege-escalation/
 
