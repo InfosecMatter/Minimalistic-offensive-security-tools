@@ -7,7 +7,7 @@ A simple yet powerful TCP and UDP port scanners:
 
 Despite the minimalistic design, both port scanners keep track of everything by using a simple state file (scanresults.txt) which is created in the current working directory. This allows the scanners to be easily resumed if they were interrupted or to skip already scanned hosts / ports.
 
-See the main article for detailed description: https://www.infosecmatter.com/minimalistic-tcp-and-udp-port-scanner/
+See the main article for detailed description: https://www.infosecmatter.com/port-scanner-in-powershell-tcp-udp-ps1/
 
 ## Usage and examples
 ```
@@ -60,7 +60,7 @@ test-port-udp 192.168.205.15 (53,161,623)
 
 ![portscan-network-range-multiple-ports2](https://user-images.githubusercontent.com/60963123/84473338-f0e90c00-ac99-11ea-937d-9593a0035fd7.png)
 
-For more information, visit https://www.infosecmatter.com/minimalistic-tcp-and-udp-port-scanner/
+For more information, visit https://www.infosecmatter.com/port-scanner-in-powershell-tcp-udp-ps1/
 
 ---
 
@@ -72,7 +72,7 @@ It takes a username and a wordlist (password list) as parameters and it tries to
 
 The tool keeps track of the progress in a state file in the current working directory. This allows the tool to be resumed if it was interrupted or skip already compromised accounts.
 
-See the main article for detailed description: https://www.infosecmatter.com/minimalistic-local-admin-bruteforcer-windows-privilege-escalation/
+See the main article for detailed description: https://www.infosecmatter.com/windows-local-admin-brute-force-attack-tool-localbrute-ps1/
 
 ## Usage and examples
 ```
@@ -94,7 +94,7 @@ Brute force login attack on local Administrator account:
 ![local-account-login-bruteforce-with-loginbrute-github](https://user-images.githubusercontent.com/60963123/98514680-480ffe80-2283-11eb-9b0d-29957382b448.png)
 
 
-For more information, visit https://www.infosecmatter.com/minimalistic-local-admin-bruteforcer-windows-privilege-escalation/
+For more information, visit https://www.infosecmatter.com/windows-local-admin-brute-force-attack-tool-localbrute-ps1/
 
 ---
 
@@ -106,7 +106,7 @@ It takes a list of targets and credentials (username and password) as parameters
 
 Despite its minimalistic design, the tool keeps track of everything by writing every result into a text file. This allows the tool to be easily resumed if it was interrupted or skip already compromised targets.
 
-See the main article for detailed description: https://www.infosecmatter.com/minimalistic-smb-login-bruteforcer/
+See the main article for detailed description: https://www.infosecmatter.com/smb-brute-force-attack-tool-in-powershell-smblogin-ps1/
 
 ## Usage and examples
 ```
@@ -128,7 +128,7 @@ SMB password spraying over the network:
 
 ![smblogin-1-smb-login-attack-running](https://user-images.githubusercontent.com/60963123/81509090-4b005580-9319-11ea-9706-6cc5d0b60f9a.png)
 
-For more information, visit https://www.infosecmatter.com/minimalistic-smb-login-bruteforcer/
+For more information, visit https://www.infosecmatter.com/smb-brute-force-attack-tool-in-powershell-smblogin-ps1/
 
 ---
 
@@ -140,7 +140,7 @@ It takes list of usernames and a password and tries to login with it against spe
 
 It also retains results in a file in the current working directory, so it can be interrupted and resumed (it will not try to login again if the given user has already been compromised or tried with the given password).
 
-See the main article for detailed description: https://www.infosecmatter.com/minimalistic-ad-login-bruteforcer/
+See the main article for detailed description: https://www.infosecmatter.com/active-directory-brute-force-attack-tool-in-powershell-adlogin-ps1/
 
 ## Usage and examples
 
@@ -163,4 +163,4 @@ Password login attack against domain users:
 
 ![adlogin-attack-01-started](https://user-images.githubusercontent.com/60963123/81509021-cd3c4a00-9318-11ea-919f-9c6fd7ccfaed.jpg)
 
-For more information, visit https://www.infosecmatter.com/minimalistic-ad-login-bruteforcer/
+For more information, visit https://www.infosecmatter.com/active-directory-brute-force-attack-tool-in-powershell-adlogin-ps1/
