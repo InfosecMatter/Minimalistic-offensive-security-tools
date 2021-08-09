@@ -1,8 +1,8 @@
 Function port-scan-tcp {
   param($hosts,$ports)
   if (!$ports) {
-    Write-Host "usage: test-port-tcp <host|hosts> <port|ports>"
-    Write-Host " e.g.: test-port-tcp 192.168.1.2 445`n"
+    Write-Host "usage: port-scan-tcp <host|hosts> <port|ports>"
+    Write-Host " e.g.: port-scan-tcp 192.168.1.2 445`n"
     return
   }
   $out = ".\scanresults.txt"
@@ -36,9 +36,9 @@ Function port-scan-tcp {
 
 # Examples:
 #
-# test-port-tcp 10.10.0.1 137
-# test-port-tcp 10.10.0.1 (135,137,445)
-# test-port-tcp (gc .\ips.txt) 137
-# test-port-tcp (gc .\ips.txt) (135,137,445)
-# 0..255 | foreach { test-port-tcp 10.10.0.$_ 137 }
-# 0..255 | foreach { test-port-tcp 10.10.0.$_ (135,137,445) }
+# port-scan-tcp 10.10.0.1 137
+# port-scan-tcp 10.10.0.1 (135,137,445)
+# port-scan-tcp (gc .\ips.txt) 137
+# port-scan-tcp (gc .\ips.txt) (135,137,445)
+# 0..255 | foreach { port-scan-tcp 10.10.0.$_ 137 }
+# 0..255 | foreach { port-scan-tcp 10.10.0.$_ (135,137,445) }
