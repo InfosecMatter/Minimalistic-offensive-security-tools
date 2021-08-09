@@ -1,8 +1,8 @@
 Function port-scan-udp {
   param($hosts,$ports)
   if (!$ports) {
-    Write-Host "usage: test-port-udp <host|hosts> <port|ports>"
-    Write-Host " e.g.: test-port-udp 192.168.1.2 445`n"
+    Write-Host "usage: port-scan-udp <host|hosts> <port|ports>"
+    Write-Host " e.g.: port-scan-udp 192.168.1.2 445`n"
     return
   }
   $out = ".\scanresults.txt"
@@ -51,9 +51,9 @@ Function port-scan-udp {
 
 # Examples:
 #
-# test-port-udp 10.10.0.1 137
-# test-port-udp 10.10.0.1 (135,137,445)
-# test-port-udp (gc .\ips.txt) 137
-# test-port-udp (gc .\ips.txt) (135,137,445)
-# 0..255 | foreach { test-port-udp 10.10.0.$_ 137 }
-# 0..255 | foreach { test-port-udp 10.10.0.$_ (135,137,445) }
+# port-scan-udp 10.10.0.1 137
+# port-scan-udp 10.10.0.1 (135,137,445)
+# port-scan-udp (gc .\ips.txt) 137
+# port-scan-udp (gc .\ips.txt) (135,137,445)
+# 0..255 | foreach { port-scan-udp 10.10.0.$_ 137 }
+# 0..255 | foreach { port-scan-udp 10.10.0.$_ (135,137,445) }
