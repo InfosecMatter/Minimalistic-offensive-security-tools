@@ -1,18 +1,20 @@
 Function port-scan-udp {
-  param($hosts,$ports)
+  param($hosts,$ports,$out)
   if (!$ports) {
-    Write-Host "usage: port-scan-udp <host|hosts> <port|ports>"
+    Write-Host "usage: port-scan-udp <host|hosts> <port|ports> <cache|log file>"
     Write-Host " e.g.: port-scan-udp 192.168.1.2 445`n"
     return
   }
-  $out = ".\scanresults.txt"
+  if (!$out) {$out = ".\scanresults."+(Get-Date -Format "yyMMdd")+".txt"}
   foreach($p in [array]$ports) {
    foreach($h in [array]$hosts) {
-    $x = (gc $out -EA SilentlyContinue | select-string "^$h,udp,$p,")
+    $x = (gc $out -EA SilentlyContinue | select-string "^$h,udp,$p,Open")
     if ($x) {
-      gc $out | select-string "^$h,udp,$p,"
+	  Writ-Host "`tCached:" 
+      gc $out | select-string "^$h,udp,$p,Open"
+	  Writ-Host "`tSearching:"
       continue
-    }
+   }
     $msg = "$h,udp,$p,"
     $u = new-object system.net.sockets.udpclient
     $u.Client.ReceiveTimeout = 500
@@ -42,14 +44,18 @@ Function port-scan-udp {
       }
     }
     $u.Close()
+    Write-Host "`r$msg" -NoNewline
     $msg += $r
-    Write-Host "$msg"
+    if ($r -ne "Filtered"){ Write-Host "$r"}
     echo $msg >>$out
    }
   }
+	Write-Host "`r                                                                        " -NoNewline
 }
 
 # Examples:
+
+# write-host "Test ports:" ; 50..55 | sort-object {get-random} | % {port-scan-udp 31.192.111.206 $_}
 #
 # port-scan-udp 10.10.0.1 137
 # port-scan-udp 10.10.0.1 (135,137,445)
